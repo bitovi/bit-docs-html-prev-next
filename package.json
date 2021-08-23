@@ -1,0 +1,37 @@
+{
+  "name": "bit-docs-html-prev-next",
+  "version": "0.0.1-rc1",
+  "description": "prev-next bit-docs plugin",
+  "main": "prev-next.js",
+  "scripts": {
+    "jshint": "jshint prev-next.js --config .jshintrc",
+    "test": "npm run jshint && testee test/index.html --browsers chrome --reporter Spec --timeout 999999",
+    "postversion": "git push --tags && git push",
+    "release:pre": "npm version prerelease && npm publish",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitovi/bit-docs-html-prev-next.git"
+  },
+  "keywords": [
+    "bit-docs"
+  ],
+  "author": "Bitovi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bitovi/bit-docs-html-prev-next/issues"
+  },
+  "homepage": "https://github.com/bitovi/bit-docs-html-prev-next#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "jquery": "^3.1.1",
+    "jshint": "^2.13.1",
+    "steal": "^0.16.45",
+    "steal-mocha": "0.0.3",
+    "testee": "^0.9.1"
+  }
+}
